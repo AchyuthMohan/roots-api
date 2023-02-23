@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-w+d+jkp%)nbnm6l=$h9$_go4-1gky9h!z&)ew2c%@z3b7ez3^q
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-# AUTH_USER_MODEL='api.User'
+AUTH_USER_MODEL='api.User'
 ALLOWED_HOSTS=['*']
 CORS_ORIGIN_ALLOW_ALL = True
 
@@ -125,10 +125,20 @@ WSGI_APPLICATION = 'rootsapi.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres', 
+        'USER': 'postgres', 
+        'PASSWORD': 'Roots@TechMinds',
+        'HOST': 'db.xbaosaxdkuqasodxafrc.supabase.co', 
+        'PORT': '5432',
     }
 }
 
