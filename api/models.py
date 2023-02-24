@@ -98,15 +98,6 @@ class Item(models.Model):
     def __str__(self):
         return(self.item_name)
     
-class Guide(models.Model):
-    guide_name=models.CharField(max_length=100)
-    guide_image=CloudinaryField('image')
-    place_foreign=models.ForeignKey(Place,on_delete=models.CASCADE)
-    guide_description=models.TextField(max_length=200)
-
-    def __str__(self):
-        return(self.guide_name)
-
 class Purchase(models.Model):
     item_foreign_key=models.ForeignKey(Item,on_delete=models.CASCADE)
     user_foreign=models.ForeignKey(User,on_delete=models.CASCADE)

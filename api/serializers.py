@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import(User,Trending,Place,Activities,Guide,Item,Festival,Purchase,Attraction,Booking,GuideDetail)
+from .models import(User,Trending,Place,Activities,Item,Festival,Purchase,Attraction,Booking,GuideDetail)
 from rest_framework.permissions import (IsAuthenticated)
 
 class RegisterSerializer(serializers.ModelSerializer):
@@ -52,7 +52,7 @@ class FestivalSerializer(serializers.ModelSerializer):
 class GuideSerializer(serializers.ModelSerializer):
     guide_image=serializers.ImageField(max_length=None,allow_empty_file=False,use_url=True,required=False)
     class Meta:
-        model=Guide
+        model=GuideDetail
         fields='__all__'
 
 class ItemSerializer(serializers.ModelSerializer):

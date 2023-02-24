@@ -1,5 +1,5 @@
 from rest_framework import generics,mixins,viewsets,status
-from .models import (User,Trending,Place,Activities,Guide,Item,Festival,Purchase,Attraction,Booking,GuideDetail)
+from .models import (User,Trending,Place,Activities,Item,Festival,Purchase,Attraction,Booking,GuideDetail)
 from .serializers import (UserSerializer,RegisterSerializer,TrendingSerializer,PlaceSerializer,ActivitiesSerializer,
                           FestivalSerializer,ItemSerializer,GuideSerializer,PurchaseSerializer,AttractionSerializer,BookingSerializer,
                           GuideSerializer)
@@ -32,9 +32,6 @@ class ItemViewSet(viewsets.GenericViewSet,mixins.RetrieveModelMixin,mixins.ListM
     serializer_class=ItemSerializer
     queryset=Item.objects.all()
 
-class GuideViewSet(viewsets.GenericViewSet,mixins.RetrieveModelMixin,mixins.ListModelMixin):
-    serializer_class=GuideSerializer
-    queryset=Guide.objects.all()
 
 class PurchaseViewSet(viewsets.GenericViewSet,mixins.RetrieveModelMixin,mixins.ListModelMixin,mixins.CreateModelMixin):
     permission_classes=[IsAuthenticated]
@@ -50,7 +47,7 @@ class BookingViewSet(viewsets.GenericViewSet,mixins.RetrieveModelMixin,mixins.Li
     serializer_class= BookingSerializer
     queryset=Booking.objects.all()
 
-class GuideDetailViewset(viewsets.GenericViewSet,mixins.CreateModelMixin,mixins.RetrieveModelMixin,mixins.ListModelMixin):
+class GuideDetailViewset(viewsets.GenericViewSet,mixins.ListModelMixin,mixins.CreateModelMixin,mixins.UpdateModelMixin):
     permission_classes=[IsAuthenticatedOrReadOnly]
     serializer_class=GuideSerializer
     queryset=GuideDetail.objects.all()
