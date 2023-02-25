@@ -1,8 +1,7 @@
 from rest_framework import generics,mixins,viewsets,status
 from .models import (User,Trending,Place,Activities,Item,Festival,Purchase,Attraction,Booking,GuideDetail)
 from .serializers import (UserSerializer,RegisterSerializer,TrendingSerializer,PlaceSerializer,ActivitiesSerializer,
-                          FestivalSerializer,ItemSerializer,GuideSerializer,PurchaseSerializer,AttractionSerializer,BookingSerializer,
-                          GuideSerializer)
+                          FestivalSerializer,ItemSerializer,GuideSerializer,PurchaseSerializer,AttractionSerializer,BookingSerializer,)
 from rest_framework.views import APIView
 from rest_framework.permissions import IsAuthenticated,IsAuthenticatedOrReadOnly
 from rest_framework.response import Response

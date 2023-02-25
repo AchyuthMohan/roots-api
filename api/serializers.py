@@ -50,7 +50,7 @@ class FestivalSerializer(serializers.ModelSerializer):
         fields='__all__'
 
 class GuideSerializer(serializers.ModelSerializer):
-    guide_image=serializers.ImageField(max_length=None,allow_empty_file=False,use_url=True,required=False)
+    image=serializers.ImageField(max_length=None,allow_empty_file=False,use_url=True,required=False)
     class Meta:
         model=GuideDetail
         fields='__all__'
@@ -77,10 +77,6 @@ class BookingSerializer(serializers.ModelSerializer):
         model=Booking
         fields='__all__'
 
-class GuideDetailSerializer(serializers.ModelSerializer):
-    class Meta:
-        model=GuideDetail
-        fields='__all__'
 
 
         
