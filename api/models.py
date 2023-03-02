@@ -125,7 +125,6 @@ class Booking(models.Model):
 class GuideDetail(models.Model):
     user_foreign=models.ForeignKey(User,on_delete=models.CASCADE)
     name=models.CharField(max_length=100)
-    image=CloudinaryField('image')
     place_foreign=models.ForeignKey(Place,on_delete=models.CASCADE)
     desc=models.TextField(max_length=200)
     age=models.IntegerField()

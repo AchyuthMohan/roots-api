@@ -50,7 +50,6 @@ class FestivalSerializer(serializers.ModelSerializer):
         fields='__all__'
 
 class GuideSerializer(serializers.ModelSerializer):
-    image=serializers.ImageField(max_length=None,allow_empty_file=False,use_url=True,required=False)
     class Meta:
         model=GuideDetail
         fields='__all__'
