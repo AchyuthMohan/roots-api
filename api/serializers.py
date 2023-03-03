@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import(User,Trending,Place,Activities,Item,Festival,Purchase,Attraction,Booking,GuideDetail)
+from .models import(User,Trending,Place,Activities,Item,Festival,Purchase,Attraction,Booking,GuideDetail,Contact)
 from rest_framework.permissions import (IsAuthenticated)
 
 class RegisterSerializer(serializers.ModelSerializer):
@@ -74,6 +74,11 @@ class AttractionSerializer(serializers.ModelSerializer):
 class BookingSerializer(serializers.ModelSerializer):
     class Meta:
         model=Booking
+        fields='__all__'
+
+class ContactSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=Contact
         fields='__all__'
 
 
