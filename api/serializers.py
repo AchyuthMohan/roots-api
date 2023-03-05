@@ -38,7 +38,6 @@ class PlaceSerializer(serializers.ModelSerializer):
         fields='__all__'
 
 class ActivitiesSerializer(serializers.ModelSerializer):
-    place_image=serializers.ImageField(max_length=None,allow_empty_file=False,use_url=True,required=False)
     class Meta:
         model=Activities
         fields='__all__'
