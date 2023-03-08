@@ -83,7 +83,7 @@ class Activities(models.Model):
 
 class Festival(models.Model):
     festival_name=models.CharField(max_length=100)
-    festival_desc=models.TextField(max_length=300)
+    festival_desc=models.TextField(max_length=1000)
     place_foreign=models.ForeignKey(Place,on_delete=models.CASCADE)
     festival_image=CloudinaryField('image')
 
