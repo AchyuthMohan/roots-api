@@ -121,9 +121,9 @@ TEMPLATES = [
 ]
 
 cloudinary.config( 
-  cloud_name = "dofjrt5es", 
-  api_key = "323729299777531", 
-  api_secret = "sHqDWdHsegS49MQ-0wKwomvUJ-4",
+  cloud_name = "dcyi8j5mx", 
+  api_key = "138486741849241", 
+  api_secret = "lkVe2C3zppJMPpw2dKxFxTYMhjM",
   secure = True
 )
 
@@ -144,8 +144,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'postgres', 
         'USER': 'postgres', 
-        'PASSWORD': 'Roots@TechMinds',
-        'HOST': 'db.xbaosaxdkuqasodxafrc.supabase.co', 
+        'PASSWORD': '@@Nandini517@@',
+        'HOST': 'db.qiroejjnamwimyqgejai.supabase.co', 
         'PORT': '5432',
     }
 }
